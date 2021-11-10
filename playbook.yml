@@ -1,11 +1,10 @@
 ---
-- name: Install Longhorn
+- name: Autoapprove Nodes CSR
   hosts:
-    - longhorn_executor
-    - longhorn_nodes
+    - pxe
   become: true
   tags:
-    - longhorn
+    - csr
   roles:
-    - role: gepaplexx.longhorn
+    - role: gepaplexx.csr_autoapprove
 ...
